@@ -26,17 +26,97 @@ public class FormLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel5 = new javax.swing.JLabel();
+        labelLogin = new javax.swing.JLabel();
+        textNoHpUsernameEmail = new javax.swing.JTextField();
+        textPwd = new javax.swing.JTextField();
+        buttonLogin = new javax.swing.JButton();
+        labelLupaSandi = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        buttonFacebook = new javax.swing.JButton();
+        buttonGoogle = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel5.setBackground(new java.awt.Color(255, 51, 51));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel5.setText("Daftar");
+
+        labelLogin.setText("Log In");
+
+        textNoHpUsernameEmail.setText("No. Handphone/Username/Email");
+        textNoHpUsernameEmail.setEnabled(false);
+
+        textPwd.setText("Password");
+        textPwd.setEnabled(false);
+
+        buttonLogin.setBackground(new java.awt.Color(255, 51, 51));
+        buttonLogin.setForeground(new java.awt.Color(255, 255, 255));
+        buttonLogin.setText("LOG IN");
+
+        labelLupaSandi.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        labelLupaSandi.setForeground(new java.awt.Color(0, 51, 255));
+        labelLupaSandi.setText("Lupa Password");
+
+        jLabel3.setText("______________________   ATAU   ______________________");
+        jLabel3.setEnabled(false);
+
+        buttonFacebook.setText("Facebook");
+
+        buttonGoogle.setText("Google");
+
+        jLabel4.setText("Pengguna baru?");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(buttonFacebook, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buttonGoogle, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelLupaSandi)
+                        .addComponent(buttonLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelLogin)
+                        .addComponent(textPwd)
+                        .addComponent(textNoHpUsernameEmail)))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(labelLogin)
+                .addGap(18, 18, 18)
+                .addComponent(textNoHpUsernameEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(textPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(labelLupaSandi)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonFacebook, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonGoogle, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
@@ -78,5 +158,15 @@ public class FormLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonFacebook;
+    private javax.swing.JButton buttonGoogle;
+    private javax.swing.JButton buttonLogin;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel labelLogin;
+    private javax.swing.JLabel labelLupaSandi;
+    private javax.swing.JTextField textNoHpUsernameEmail;
+    private javax.swing.JTextField textPwd;
     // End of variables declaration//GEN-END:variables
 }

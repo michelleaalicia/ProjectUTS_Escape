@@ -26,21 +26,140 @@ public class FormRegister extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Judul = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        labelNama = new javax.swing.JLabel();
+        textNama = new javax.swing.JTextField();
+        textSandi = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        labelSandi = new javax.swing.JLabel();
+        buttonSelesai = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        Back = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Judul.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Judul.setText("Daftar dengan Email");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 255, 0));
+        jLabel9.setText("Kebijakan Privasi");
+
+        labelNama.setText("Nama Lengkap");
+
+        textNama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textNamaActionPerformed(evt);
+            }
+        });
+
+        textSandi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textSandiActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 2, 10)); // NOI18N
+        jLabel3.setText("*Minimum 8 kararter");
+        jLabel3.setEnabled(false);
+
+        labelSandi.setText("Kata Sandi");
+
+        buttonSelesai.setBackground(new java.awt.Color(0, 255, 51));
+        buttonSelesai.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        buttonSelesai.setForeground(new java.awt.Color(255, 255, 255));
+        buttonSelesai.setText("SELESAI");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jLabel5.setText("Dengan mendaftar, saya menyetujui");
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 255, 0));
+        jLabel6.setText("Syarat dan Ketentuan");
+
+        Back.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Back.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Back.setText("←");
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jLabel8.setText("serta");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addComponent(jLabel5))
+                            .addComponent(textNama, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelNama)
+                            .addComponent(labelSandi)
+                            .addComponent(textSandi, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(buttonSelesai, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(46, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(Judul)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Judul))
+                .addGap(12, 12, 12)
+                .addComponent(labelNama)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textNama, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(labelSandi)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textSandi, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(buttonSelesai, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel8))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void textNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNamaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textNamaActionPerformed
+
+    private void textSandiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textSandiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textSandiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +197,17 @@ public class FormRegister extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Back;
+    private javax.swing.JLabel Judul;
+    private javax.swing.JButton buttonSelesai;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel labelNama;
+    private javax.swing.JLabel labelSandi;
+    private javax.swing.JTextField textNama;
+    private javax.swing.JTextField textSandi;
     // End of variables declaration//GEN-END:variables
 }
