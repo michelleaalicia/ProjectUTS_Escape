@@ -101,7 +101,7 @@ public class FormCheckOut extends javax.swing.JFrame {
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tiket A", "Tiket B ", "Tiket C", "Tiket D" }));
 
         labelMetodePembayaran1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        labelMetodePembayaran1.setText("Total :");
+        labelMetodePembayaran1.setText("Total Pembayaran :");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
