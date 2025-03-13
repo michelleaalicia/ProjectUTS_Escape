@@ -29,7 +29,6 @@ public class FormLogin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         labelCheckOut = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        textNoHpUsernameEmail = new javax.swing.JTextField();
         btnRegister = new javax.swing.JButton();
         labelLupaSandi = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -39,6 +38,7 @@ public class FormLogin extends javax.swing.JFrame {
         labelnama1 = new javax.swing.JLabel();
         btnlogin = new javax.swing.JButton();
         labelLupaSandi1 = new javax.swing.JLabel();
+        txtUsername = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,8 +66,6 @@ public class FormLogin extends javax.swing.JFrame {
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 255));
-
-        textNoHpUsernameEmail.setEnabled(false);
 
         btnRegister.setBackground(new java.awt.Color(0, 255, 51));
         btnRegister.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
@@ -125,8 +123,8 @@ public class FormLogin extends javax.swing.JFrame {
                                     .addComponent(labelnama1, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(textNoHpUsernameEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
-                                    .addComponent(pswd))))
+                                    .addComponent(pswd, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                                    .addComponent(txtUsername))))
                         .addGap(0, 41, Short.MAX_VALUE))))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
@@ -141,13 +139,13 @@ public class FormLogin extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textNoHpUsernameEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelnama1))
+                    .addComponent(labelnama1)
+                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pswd, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pswd, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelPassword))
-                .addGap(62, 62, 62)
+                .addGap(76, 76, 76)
                 .addComponent(labelLupaSandi)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -155,7 +153,7 @@ public class FormLogin extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelLupaSandi1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(146, 146, 146)
@@ -181,7 +179,7 @@ public class FormLogin extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -235,6 +233,6 @@ public class FormLogin extends javax.swing.JFrame {
     private javax.swing.JLabel labelPassword;
     private javax.swing.JLabel labelnama1;
     private javax.swing.JPasswordField pswd;
-    private javax.swing.JTextField textNoHpUsernameEmail;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }

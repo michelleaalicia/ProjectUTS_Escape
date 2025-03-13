@@ -40,7 +40,7 @@
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="27" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -123,8 +123,8 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="textNoHpUsernameEmail" pref="288" max="32767" attributes="0"/>
-                                      <Component id="pswd" max="32767" attributes="0"/>
+                                      <Component id="pswd" pref="288" max="32767" attributes="0"/>
+                                      <Component id="txtUsername" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -148,15 +148,15 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="textNoHpUsernameEmail" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="labelnama1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtUsername" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="pswd" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="pswd" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="labelPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                   <Component id="labelLupaSandi" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" pref="32" max="-2" attributes="0"/>
@@ -165,7 +165,7 @@
                       <Component id="btnRegister" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="labelLupaSandi1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="63" max="32767" attributes="0"/>
+                  <EmptySpace pref="84" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -178,11 +178,6 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="textNoHpUsernameEmail">
-          <Properties>
-            <Property name="enabled" type="boolean" value="false"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="btnRegister">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -261,6 +256,8 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Pengguna baru ?"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtUsername">
         </Component>
       </SubComponents>
     </Container>
