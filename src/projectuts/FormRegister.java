@@ -111,9 +111,7 @@ public class FormRegister extends javax.swing.JFrame {
         jLabel3.setText("*Minimum 8 kararter");
         jLabel3.setEnabled(false);
 
-        buttonSelesai.setBackground(new java.awt.Color(0, 255, 51));
         buttonSelesai.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 18)); // NOI18N
-        buttonSelesai.setForeground(new java.awt.Color(255, 255, 255));
         buttonSelesai.setText("SELESAI");
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
