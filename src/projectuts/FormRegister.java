@@ -58,7 +58,7 @@ public class FormRegister extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        Judul.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
+        Judul.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 36)); // NOI18N
         Judul.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Judul.setText("REGISTER");
 
@@ -74,7 +74,7 @@ public class FormRegister extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addComponent(Back)
                 .addGap(65, 65, 65)
-                .addComponent(Judul, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Judul, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(

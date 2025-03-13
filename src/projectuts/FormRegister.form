@@ -70,7 +70,7 @@
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   <Component id="Back" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                  <Component id="Judul" min="-2" pref="115" max="-2" attributes="0"/>
+                  <Component id="Judul" min="-2" pref="146" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -92,7 +92,7 @@
         <Component class="javax.swing.JLabel" name="Judul">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tw Cen MT Condensed Extra Bold" size="24" style="1"/>
+              <Font name="Tw Cen MT Condensed Extra Bold" size="36" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="REGISTER"/>
