@@ -15,8 +15,11 @@ public class ProjectUTS {
      */
     public static void main(String[] args) 
     {
-        // TODO code application logic here
-        System.out.println("hallo");
+        FormRegister rg = new FormRegister();
+        rg.setVisible (true);
+        rg.pack ();
+        rg.setLocationRelativeTo (null);
+        rg.setDefaultCloseOperation (FormRegister. EXIT_ON_CLOSE) ;
         
         
     }
