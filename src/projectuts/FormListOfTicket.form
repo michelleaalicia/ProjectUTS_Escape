@@ -109,18 +109,18 @@
                               <Component id="jScrollPane1" alignment="0" min="-2" pref="321" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblNama2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblNama" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblNama1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblNumberOfTickets" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblChooseRide" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblChooseDate" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jComboBox1" max="32767" attributes="0"/>
-                                      <Component id="jTextField1" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
                                           <Component id="jSpinner1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
+                                      <Component id="jDateChooser1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
@@ -131,11 +131,11 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
-                          <Component id="btnRegister1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnContinueToPay" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
-                          <Component id="btnRegister" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAddTicket" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="44" max="32767" attributes="0"/>
@@ -149,25 +149,25 @@
                   <Component id="lblWelcome" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblNama" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblChooseRide" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblNama1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblChooseDate" min="-2" max="-2" attributes="0"/>
+                      <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblNama2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblNumberOfTickets" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jSpinner1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  <Component id="btnRegister" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAddTicket" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="122" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="btnRegister1" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnContinueToPay" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -196,7 +196,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="btnRegister">
+        <Component class="javax.swing.JButton" name="btnAddTicket">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d2" green="e9" red="c9" type="rgb"/>
@@ -207,7 +207,7 @@
             <Property name="text" type="java.lang.String" value="ADD TICKET"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblNama">
+        <Component class="javax.swing.JLabel" name="lblChooseRide">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tw Cen MT Condensed Extra Bold" size="18" style="0"/>
@@ -215,7 +215,7 @@
             <Property name="text" type="java.lang.String" value="Choose a Ride"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblNama1">
+        <Component class="javax.swing.JLabel" name="lblChooseDate">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tw Cen MT Condensed Extra Bold" size="18" style="0"/>
@@ -223,7 +223,7 @@
             <Property name="text" type="java.lang.String" value="Choose a Date"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblNama2">
+        <Component class="javax.swing.JLabel" name="lblNumberOfTickets">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tw Cen MT Condensed Extra Bold" size="18" style="0"/>
@@ -231,7 +231,7 @@
             <Property name="text" type="java.lang.String" value="Number of Tickets"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnRegister1">
+        <Component class="javax.swing.JButton" name="btnContinueToPay">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d2" green="e9" red="c9" type="rgb"/>
@@ -265,11 +265,6 @@
         </Component>
         <Component class="javax.swing.JSpinner" name="jSpinner1">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField1"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="lblWelcome">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -278,6 +273,8 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Let the adventure begin!"/>
           </Properties>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
         </Component>
       </SubComponents>
     </Container>
