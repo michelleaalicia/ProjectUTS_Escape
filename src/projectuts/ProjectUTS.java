@@ -15,11 +15,11 @@ public class ProjectUTS {
      */
     public static void main(String[] args) 
     {
-        FormRegister rg = new FormRegister();
-        rg.setVisible (true);
-        rg.pack ();
-        rg.setLocationRelativeTo (null);
-        rg.setDefaultCloseOperation (FormRegister. EXIT_ON_CLOSE) ;
+        FormRegister reg = new FormRegister();
+        reg.setVisible(true);
+        reg.pack();
+        reg.setLocationRelativeTo(null);
+        reg.setDefaultCloseOperation(FormRegister.EXIT_ON_CLOSE);
         
         
     }

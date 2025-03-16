@@ -27,8 +27,8 @@ public class FormLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblMinimize = new javax.swing.JLabel();
+        lblClose = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnRegister = new javax.swing.JButton();
         lblEnterUsnPwd = new javax.swing.JLabel();
@@ -47,11 +47,21 @@ public class FormLogin extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(120, 157, 188));
         jPanel1.setPreferredSize(new java.awt.Dimension(360, 40));
 
-        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 36)); // NOI18N
-        jLabel2.setText("-");
+        lblMinimize.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 36)); // NOI18N
+        lblMinimize.setText("-");
+        lblMinimize.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblMinimizeMouseClicked(evt);
+            }
+        });
 
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 36)); // NOI18N
-        jLabel1.setText("X");
+        lblClose.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 36)); // NOI18N
+        lblClose.setText("X");
+        lblClose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblCloseMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -59,9 +69,9 @@ public class FormLogin extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(302, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addComponent(lblMinimize)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1)
+                .addComponent(lblClose)
                 .addGap(49, 49, 49))
         );
         jPanel1Layout.setVerticalGroup(
@@ -69,8 +79,8 @@ public class FormLogin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(lblClose)
+                    .addComponent(lblMinimize))
                 .addContainerGap())
         );
 
@@ -82,6 +92,11 @@ public class FormLogin extends javax.swing.JFrame {
         btnRegister.setBackground(new java.awt.Color(254, 249, 242));
         btnRegister.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
         btnRegister.setText("REGISTER");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
 
         lblEnterUsnPwd.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
         lblEnterUsnPwd.setText("Ready to play? Log in with your username and password.");
@@ -95,6 +110,11 @@ public class FormLogin extends javax.swing.JFrame {
         btnLogin.setBackground(new java.awt.Color(201, 233, 210));
         btnLogin.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
         btnLogin.setText("LOG IN");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
 
         lblIDontHaveAcc.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
         lblIDontHaveAcc.setForeground(new java.awt.Color(0, 51, 255));
@@ -168,6 +188,34 @@ public class FormLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+        FormMain main = new FormMain();
+        main.setVisible(true);
+        main.pack();
+        main.setLocationRelativeTo(null);
+        main.setDefaultCloseOperation(FormRegister.EXIT_ON_CLOSE);
+    }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        // TODO add your handling code here:
+        FormRegister reg = new FormRegister();
+        reg.setVisible(true);
+        reg.pack();
+        reg.setLocationRelativeTo(null);
+        reg.setDefaultCloseOperation(FormRegister.EXIT_ON_CLOSE);
+    }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void lblMinimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimizeMouseClicked
+        // TODO add your handling code here:
+        this.setState(1);
+    }//GEN-LAST:event_lblMinimizeMouseClicked
+
+    private void lblCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCloseMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_lblCloseMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -206,13 +254,13 @@ public class FormLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnRegister;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JLabel lblClose;
     private javax.swing.JLabel lblEnterUsnPwd;
     private javax.swing.JLabel lblIDontHaveAcc;
+    private javax.swing.JLabel lblMinimize;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblUsername;
     private javax.swing.JLabel lblWelcome;

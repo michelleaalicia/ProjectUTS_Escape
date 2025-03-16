@@ -15,6 +15,7 @@ public class FormMain extends javax.swing.JFrame {
      */
     public FormMain() {
         initComponents();
+        lblUsername.setText(FormRegister.username + "!");
     }
 
     /**
@@ -29,10 +30,13 @@ public class FormMain extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         lblWelcome = new javax.swing.JLabel();
         lblWelcome1 = new javax.swing.JLabel();
-        lblWelcome2 = new javax.swing.JLabel();
-        lblWelcome3 = new javax.swing.JLabel();
+        lblUsername = new javax.swing.JLabel();
+        btnLogin = new javax.swing.JButton();
+        btnLogin1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(255, 227, 227));
 
@@ -44,54 +48,63 @@ public class FormMain extends javax.swing.JFrame {
         lblWelcome1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblWelcome1.setText("Welcome to Playtopia!");
 
-        lblWelcome2.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
-        lblWelcome2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblWelcome2.setText("Username");
+        lblUsername.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
+        lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblUsername.setText("Username");
 
-        lblWelcome3.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
-        lblWelcome3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblWelcome3.setText("!");
+        btnLogin.setBackground(new java.awt.Color(201, 233, 210));
+        btnLogin.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
+        btnLogin.setText("BOOK A TICKET");
+
+        btnLogin1.setBackground(new java.awt.Color(201, 233, 210));
+        btnLogin1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
+        btnLogin1.setText("MY TICKETS");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/park.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(74, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(lblWelcome)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblUsername)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(lblWelcome)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblWelcome2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblWelcome3))
-                    .addComponent(lblWelcome1))
-                .addGap(72, 72, 72))
+                        .addGap(171, 171, 171)
+                        .addComponent(lblWelcome1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(153, 153, 153)
+                        .addComponent(btnLogin1)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnLogin))
+                    .addComponent(jLabel1))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(20, 20, 20)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblWelcome2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblWelcome3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(lblUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(1, 1, 1)
                 .addComponent(lblWelcome1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(387, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnLogin1)
+                    .addComponent(btnLogin))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 560, 560);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -132,10 +145,12 @@ public class FormMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnLogin1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblUsername;
     private javax.swing.JLabel lblWelcome;
     private javax.swing.JLabel lblWelcome1;
-    private javax.swing.JLabel lblWelcome2;
-    private javax.swing.JLabel lblWelcome3;
     // End of variables declaration//GEN-END:variables
 }

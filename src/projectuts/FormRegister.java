@@ -36,7 +36,7 @@ public class FormRegister extends javax.swing.JFrame {
         lblClose = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         lblNama = new javax.swing.JLabel();
-        txtNama = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
         lblPassword = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
         lblWarning = new javax.swing.JLabel();
@@ -108,9 +108,9 @@ public class FormRegister extends javax.swing.JFrame {
         lblNama.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
         lblNama.setText("Full Name ");
 
-        txtNama.addActionListener(new java.awt.event.ActionListener() {
+        txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNamaActionPerformed(evt);
+                txtNameActionPerformed(evt);
             }
         });
 
@@ -143,6 +143,11 @@ public class FormRegister extends javax.swing.JFrame {
         btnRegister.setBackground(new java.awt.Color(201, 233, 210));
         btnRegister.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
         btnRegister.setText("REGISTER");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
 
         lblHaveAcc.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
         lblHaveAcc.setForeground(new java.awt.Color(0, 51, 255));
@@ -172,7 +177,7 @@ public class FormRegister extends javax.swing.JFrame {
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(txtUsername)
                                         .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
-                                    .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(lblWarning)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(143, 143, 143)
@@ -200,7 +205,7 @@ public class FormRegister extends javax.swing.JFrame {
                 .addComponent(lblEnterUsnPwd)
                 .addGap(47, 47, 47)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblNama))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,9 +232,9 @@ public class FormRegister extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaActionPerformed
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNamaActionPerformed
+    }//GEN-LAST:event_txtNameActionPerformed
 
     private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
         // TODO add your handling code here:
@@ -242,6 +247,19 @@ public class FormRegister extends javax.swing.JFrame {
     private void lblMinimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimizeMouseClicked
         this.setState(1);
     }//GEN-LAST:event_lblMinimizeMouseClicked
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        // TODO add your handling code here:
+        fullName = txtName.getText();
+        username = txtUsername.getText();
+        password = jPasswordField1.getText();
+        
+        FormLogin log = new FormLogin();
+        log.setVisible(true);
+        log.pack();
+        log.setLocationRelativeTo(null);
+        log.setDefaultCloseOperation(FormRegister.EXIT_ON_CLOSE);
+    }//GEN-LAST:event_btnRegisterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -294,7 +312,7 @@ public class FormRegister extends javax.swing.JFrame {
     private javax.swing.JLabel lblUsername;
     private javax.swing.JLabel lblWarning;
     private javax.swing.JLabel lblWelcome;
-    private javax.swing.JTextField txtNama;
+    private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }
