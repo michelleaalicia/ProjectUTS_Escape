@@ -4,11 +4,13 @@
  */
 package projectuts;
 
+
+
 /**
  *
  * @author Michelle Alicia
  */
-public class FormRegister extends javax.swing.JFrame {
+public class FormRegister extends javax.swing.JFrame  {
 
     /**
      * Creates new form FormRegister
@@ -16,9 +18,11 @@ public class FormRegister extends javax.swing.JFrame {
     public static String fullName;
     public static String username;
     public static String password;
+   
     
     public FormRegister() {
-        initComponents();
+       initComponents();
+        
     }
 
     /**
@@ -315,4 +319,5 @@ public class FormRegister extends javax.swing.JFrame {
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
+
 }
