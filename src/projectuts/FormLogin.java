@@ -3,13 +3,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package projectuts;
-
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.net.Socket;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 /**
  *
  * @author Michelle Alicia
  */
 public class FormLogin extends javax.swing.JFrame {
 
+    Socket s;
+    BufferedReader msgFromServer;
+    DataOutputStream msgToServer;
     /**
      * Creates new form FormLogin
      */
@@ -37,7 +45,7 @@ public class FormLogin extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
         lblIDontHaveAcc = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtPassword = new javax.swing.JPasswordField();
         lblWelcome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -120,7 +128,7 @@ public class FormLogin extends javax.swing.JFrame {
         lblIDontHaveAcc.setForeground(new java.awt.Color(0, 51, 255));
         lblIDontHaveAcc.setText("Don't have an account?");
 
-        jPasswordField1.setText("jPasswordField1");
+        txtPassword.setText("jPasswordField1");
 
         lblWelcome.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
         lblWelcome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -153,7 +161,7 @@ public class FormLogin extends javax.swing.JFrame {
                                         .addComponent(lblUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jPasswordField1)
+                                        .addComponent(txtPassword)
                                         .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGap(38, 38, 38))))
                 .addGap(19, 19, 19))
@@ -172,7 +180,7 @@ public class FormLogin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblPassword)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnLogin)
                 .addGap(57, 57, 57)
@@ -189,12 +197,41 @@ public class FormLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        // TODO add your handling code here:
+       //password field
+        char[]passwordChars=txtPassword.getPassword();
+        String password = new String (passwordChars);
+        
         FormMain main = new FormMain();
         main.setVisible(true);
         main.pack();
         main.setLocationRelativeTo(null);
         main.setDefaultCloseOperation(FormRegister.EXIT_ON_CLOSE);
+        
+        try {
+            // Koneksi ke server di port 6000
+            s = new Socket("localhost", 6000);
+            msgFromServer = new BufferedReader(new InputStreamReader(s.getInputStream()));
+            msgToServer = new DataOutputStream(s.getOutputStream());
+
+            // Kirim data login ke server
+            msgToServer.writeBytes("LOGIN " + txtUsername.getText() + " " + password + "\n");
+
+            // Terima respon dari server
+            String hasil = msgFromServer.readLine();
+            if (hasil.equals("TRUE")) {
+                JOptionPane.showMessageDialog(this, "Login Berhasil!");
+            } else if (hasil.equals("FALSE")) {
+                JOptionPane.showConfirmDialog(this, "Akses ditolak! Username atau password salah.");
+            }
+
+            // Tutup koneksi setelah selesai
+            msgFromServer.close();
+            msgToServer.close();
+            s.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
+        }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
@@ -256,7 +293,6 @@ public class FormLogin extends javax.swing.JFrame {
     private javax.swing.JButton btnRegister;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JLabel lblClose;
     private javax.swing.JLabel lblEnterUsnPwd;
     private javax.swing.JLabel lblIDontHaveAcc;
@@ -264,6 +300,7 @@ public class FormLogin extends javax.swing.JFrame {
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblUsername;
     private javax.swing.JLabel lblWelcome;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }

@@ -135,7 +135,7 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jPasswordField1" max="32767" attributes="0"/>
+                                          <Component id="txtPassword" max="32767" attributes="0"/>
                                           <Component id="txtUsername" min="-2" pref="132" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -163,7 +163,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="lblPassword" min="-2" max="-2" attributes="0"/>
-                      <Component id="jPasswordField1" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="txtPassword" min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btnLogin" min="-2" max="-2" attributes="0"/>
@@ -243,7 +243,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtUsername">
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+        <Component class="javax.swing.JPasswordField" name="txtPassword">
           <Properties>
             <Property name="text" type="java.lang.String" value="jPasswordField1"/>
           </Properties>
