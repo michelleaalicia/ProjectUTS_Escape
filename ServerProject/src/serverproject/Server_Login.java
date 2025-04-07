@@ -8,6 +8,7 @@ package serverproject;
  *
  * @author asus
  */
-public class Server_Login {
+public class Server_Login 
+{
     
 }
