@@ -264,7 +264,7 @@ public class FormRegister extends javax.swing.JFrame  {
         log.setVisible(true);
         log.pack();
         log.setLocationRelativeTo(null);
-       log.setState(java.awt.Frame.NORMAL);
+        log.setState(java.awt.Frame.NORMAL);
         log.setDefaultCloseOperation(FormRegister.EXIT_ON_CLOSE);
     }//GEN-LAST:event_btnRegisterActionPerformed
 
