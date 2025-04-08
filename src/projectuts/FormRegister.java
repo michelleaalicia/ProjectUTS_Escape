@@ -322,7 +322,7 @@ public class FormRegister extends javax.swing.JFrame  {
          PrintWriter out = new PrintWriter(s.getOutputStream(), true);
          BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
          
-         String registerData = "REGISTER," +txtFullname.getText()+ "," + txtUsername.getText() + "," + password ;
+         String registerData = "REGISTER," +txtFullname.getText()+ "," + txtUsername.getText() + "," + password + txtEmail.getText() +" , " + txtDob.getText() + " , " + txtMember.getText();
          out.println(registerData);
          
          String response = in.readLine();
