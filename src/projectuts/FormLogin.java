@@ -49,7 +49,6 @@ public class FormLogin extends javax.swing.JFrame {
         lblWelcome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(360, 460));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(120, 157, 188));
@@ -76,7 +75,7 @@ public class FormLogin extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(302, Short.MAX_VALUE)
+                .addContainerGap(301, Short.MAX_VALUE)
                 .addComponent(lblMinimize)
                 .addGap(18, 18, 18)
                 .addComponent(lblClose)
@@ -187,11 +186,11 @@ public class FormLogin extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegister)
                     .addComponent(lblIDontHaveAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(-3, 37, 390, 420);
+        jPanel2.setBounds(-3, 37, 390, 440);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
