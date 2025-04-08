@@ -47,7 +47,7 @@ public class FormRegister extends javax.swing.JFrame  {
         lblEnterUsnPwd = new javax.swing.JLabel();
         lblWelcome = new javax.swing.JLabel();
         lblUsername = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtPassword = new javax.swing.JPasswordField();
         btnRegister = new javax.swing.JButton();
         lblHaveAcc = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
@@ -142,7 +142,7 @@ public class FormRegister extends javax.swing.JFrame  {
         lblUsername.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
         lblUsername.setText("Username");
 
-        jPasswordField1.setText("jPasswordField1");
+        txtPassword.setText("jPasswordField1");
 
         btnRegister.setBackground(new java.awt.Color(201, 233, 210));
         btnRegister.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
@@ -180,7 +180,7 @@ public class FormRegister extends javax.swing.JFrame  {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(txtUsername)
-                                        .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
+                                        .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
                                     .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(lblWarning)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -218,7 +218,7 @@ public class FormRegister extends javax.swing.JFrame  {
                 .addGap(12, 12, 12)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPassword)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblWarning, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -253,10 +253,12 @@ public class FormRegister extends javax.swing.JFrame  {
     }//GEN-LAST:event_lblMinimizeMouseClicked
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        // TODO add your handling code here:
+        
         fullName = txtName.getText();
         username = txtUsername.getText();
-        password = jPasswordField1.getText();
+        //password field
+        char[]passwordChars=txtPassword.getPassword();
+        String password = new String (passwordChars);
         
         FormLogin log = new FormLogin();
         log.setVisible(true);
@@ -306,7 +308,6 @@ public class FormRegister extends javax.swing.JFrame  {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JLabel lblClose;
     private javax.swing.JLabel lblEnterUsnPwd;
     private javax.swing.JLabel lblHaveAcc;
@@ -317,6 +318,7 @@ public class FormRegister extends javax.swing.JFrame  {
     private javax.swing.JLabel lblWarning;
     private javax.swing.JLabel lblWelcome;
     private javax.swing.JTextField txtName;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 
