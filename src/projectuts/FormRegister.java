@@ -4,6 +4,12 @@
  */
 package projectuts;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import javax.swing.JOptionPane;
+
 
 
 /**
@@ -40,7 +46,7 @@ public class FormRegister extends javax.swing.JFrame  {
         lblClose = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         lblNama = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
+        txtFullname = new javax.swing.JTextField();
         lblPassword = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
         lblWarning = new javax.swing.JLabel();
@@ -112,9 +118,9 @@ public class FormRegister extends javax.swing.JFrame  {
         lblNama.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
         lblNama.setText("Full Name ");
 
-        txtName.addActionListener(new java.awt.event.ActionListener() {
+        txtFullname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNameActionPerformed(evt);
+                txtFullnameActionPerformed(evt);
             }
         });
 
@@ -181,7 +187,7 @@ public class FormRegister extends javax.swing.JFrame  {
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(txtUsername)
                                         .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
-                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtFullname, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(lblWarning)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(143, 143, 143)
@@ -209,7 +215,7 @@ public class FormRegister extends javax.swing.JFrame  {
                 .addComponent(lblEnterUsnPwd)
                 .addGap(47, 47, 47)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFullname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblNama))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,9 +242,9 @@ public class FormRegister extends javax.swing.JFrame  {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+    private void txtFullnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNameActionPerformed
+    }//GEN-LAST:event_txtFullnameActionPerformed
 
     private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
         // TODO add your handling code here:
@@ -253,19 +259,48 @@ public class FormRegister extends javax.swing.JFrame  {
     }//GEN-LAST:event_lblMinimizeMouseClicked
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        
-        fullName = txtName.getText();
-        username = txtUsername.getText();
-        //password field
-        char[]passwordChars=txtPassword.getPassword();
-        String password = new String (passwordChars);
-        
+
         FormLogin log = new FormLogin();
         log.setVisible(true);
         log.pack();
         log.setLocationRelativeTo(null);
         log.setState(java.awt.Frame.NORMAL);
         log.setDefaultCloseOperation(FormRegister.EXIT_ON_CLOSE);
+        
+        
+        char[]passwordChars=txtPassword.getPassword();
+        String password = new String(passwordChars);
+        
+        try
+        {
+         Socket s = new Socket("localhost", 6000);
+         PrintWriter out = new PrintWriter(s.getOutputStream(), true);
+         BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
+         
+         String registerData = "REGISTER," +txtFullname.getText()+ "," + txtUsername.getText() + "," + password ;
+         out.println(registerData);
+         
+         String response = in.readLine();
+        if (response.equals("EXISTS")) 
+        {
+            JOptionPane.showMessageDialog(this, "The user is already registered in the system.");
+        } 
+        else if (response.equals("SUCCESS")) 
+        {
+            JOptionPane.showMessageDialog(this, "Registration successful! Returning to login form.");
+            this.dispose(); 
+            new FormRegister().setVisible(true); 
+        }
+
+        in.close();
+        out.close();
+        s.close();
+        }
+        catch(Exception ex)
+        {
+          ex.printStackTrace();
+          JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
+        }
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     /**
@@ -318,7 +353,7 @@ public class FormRegister extends javax.swing.JFrame  {
     private javax.swing.JLabel lblUsername;
     private javax.swing.JLabel lblWarning;
     private javax.swing.JLabel lblWelcome;
-    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtFullname;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables

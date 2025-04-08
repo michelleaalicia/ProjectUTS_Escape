@@ -135,7 +135,7 @@
                                           <Component id="txtUsername" max="32767" attributes="0"/>
                                           <Component id="txtPassword" alignment="0" pref="132" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="txtName" min="-2" pref="132" max="-2" attributes="0"/>
+                                      <Component id="txtFullname" min="-2" pref="132" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="lblWarning" min="-2" max="-2" attributes="0"/>
@@ -175,7 +175,7 @@
                   <Component id="lblEnterUsnPwd" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtFullname" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblNama" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -211,9 +211,9 @@
             <Property name="text" type="java.lang.String" value="Full Name "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtName">
+        <Component class="javax.swing.JTextField" name="txtFullname">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNameActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFullnameActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblPassword">
