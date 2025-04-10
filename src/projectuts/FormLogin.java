@@ -8,7 +8,7 @@ import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.Socket;
 import javax.swing.JOptionPane;
-import javax.swing.JPasswordField;
+
 /**
  *
  * @author Michelle Alicia
@@ -198,6 +198,7 @@ public class FormLogin extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
        //password field
+       
         char[]passwordChars=txtPassword.getPassword();
         String password = new String (passwordChars);
         
